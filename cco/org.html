@@ -200,6 +200,45 @@
         <p>
           <h3>aula 12 = Ferramentas de programação do sistema - FORMATIVO</h3>
             <ul>
+            <li>Ligador:</li>
+              <ul>
+                <li>Programa dividido em módulos, assim só se recompila o módulo alterado.</li>
+                <li>Ligador 'remenda' estes módulos garantindo compatibilidade.</li>
+                <li>Posiciona código e dados na memória, determina endereços de labels INTERNOS(já resolvidos, mas precisam ser MODIFICADOS) e EXTERNOS(não resolvidos).</li>
+                <li>Referências ocorrem em load/store(dados) e desvios(instruções)</li>
+              </ul>
+            <li>Carregador:</li>
+              <ul>
+                <li>Arquivo executável pronto.</li>
+                <li>Carregar na memória e disparar execução e termina.</li>
+              </ul>
+            <l>DLL - Dynamic Linked Libraries</l>
+              <ul>
+                <li>Ligação em tempo de execução, cada rotina só é ligada após ser invocada.</li>
+                <li>Apenas rotinas efetivamente chamadas durante o programa serão ligadas, contudo há uma degradação de desempenho na primeira vez.</li>
+                <ol>Como isto ocorre?
+                  <li>jal prinft #invoca rotina, contudo ela ainda não está carregada.
+                    <br>...
+                   <br>lw $x y(z) #rotina auxiliar no final do código, cada uma tem a sua
+                   <br>jr $x 
+                  </li>
+                  <li>$x aponta para um lugar na tabela de endereço das rotinas não locais
+                    <br>Tabela
+                    <br>endereço = x | local = y ...
+                  </li>
+                  <li>O endereço na tabela AINDA não é o correto, e sim para um ID(identificador)
+                    <br>li ID
+                    <br>j 
+                  </li>
+                  <li>Dynamic Linker/Loader Remap DLL Routine #Código do ligador/carregador
+                    <br>j dll #aqui l aponta para a rotina de fato
+                  </li>
+                  <li>DLL Routine
+                    <br>... #carrega a rotina
+                    <br>jr inicio #volta lá pra 1
+                  </li>
+                </ol>
+              </ul>
             </ul>
         </p>
 
