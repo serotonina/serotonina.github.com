@@ -119,6 +119,16 @@
                 <li>Store Conditional: sc $t0, 0($s1) #tenta encrever t0 em 0($s1). <br>
                    &nbsp&nbsp&nbsp Se flag ativado, então $t0 = 1 se foi ESCRITO e desativa. <br>
                    &nbsp&nbsp&nbsp Se flag ativado, então $t0 = 0 se NÃO foi ESCRITO.
+                <li>Implementando SEMÁFORO:</li>
+                <ol>
+                  <li>lock: la $t0, sem</li>
+                  <li>try: ll $t1, 0($t0)</li>
+                  <li>bne $t1, $zero, try</li>
+                  <li>addi $t1, $zero, 1</li>
+                  <li>sc $t1, 0($t0)</li>
+                  <li>beq $t1, $zero, try</li>
+                  <li>jr $ra</li>
+                </ol>
               </ul>
             </ul>
         </p>
