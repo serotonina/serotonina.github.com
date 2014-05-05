@@ -115,7 +115,7 @@
               <li>Paralelismo: dois processadores acessando/modificando sucessivamente um mesmo valor na memória(Data race).</li>
               &nbsp&nbsp&nbsp Operação atômica:
               <ul>
-                <li>Linked Load: ll $t1, 0($s1) #$t1 = 0($s1), vincula endereço à operação atômica(ativa flag invisível)</li>
+                <li>Linked Load: ll $t0, 0($s1) #$t0 = 0($s1), vincula endereço à operação atômica(ativa flag invisível)</li>
                 <li>Store Conditional: sc $t0, 0($s1) #tenta encrever t0 em 0($s1). <br>
                    &nbsp&nbsp&nbsp Se flag ativado, então $t0 = 1 se foi ESCRITO e desativa. <br>
                    &nbsp&nbsp&nbsp Se flag ativado, então $t0 = 0 se NÃO foi ESCRITO.
