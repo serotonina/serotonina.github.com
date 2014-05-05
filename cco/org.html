@@ -39,15 +39,21 @@
               <ul>
                 <li>Alinhado dado 'XXXXXXXX': word 1 - [XX XX XX XX]</li>
                 <li>Desalinhado dado 'XXXXXXXX': word 1 - [?? ? XX XX], word 2 - [XX XX ?? ??]</li></li>
+                <li>OBS: nºs inteiros(word) multiplicamos por 4, half word por 2, e byte por 1(não precisa).</li>
               </ul>
             <li>Instruções imediatas: constante imbutida na instrução. Ex: addi $s1, $s1, 3($s1 = $s1 + 3)</li>
             <li>Formatos de instrução: (opcode = código de operação, rs e rt = registradores,
                 rd = registrador de destino, shamt = shift amount, funct = função).</li>
               <ul>
                 <li>R = [6 bits(opcode) | 5 bits(rs) | 5 bits (rt) | 5 bits(rd) | 5 bits(shamt) | 6 bits(funct)]</li>
-                <li>I = [6 bits(opcode) | 5 bits(rs) | 5 bits (rt) | constante ou endereço ]</li>
+                <li>I = [6 bits(opcode) | 5 bits(rs) | 5 bits (rt) | 16 bits(constante ou endereço) ]</li>
               </ul>
-              
+            <li>Geração de código para 'A[200] = h + A[200];' (Assumindo: $t1 = BASE de A, $s2 = h):</li>
+              <ol>
+                <li>lw $t0, 800($t1)    #carrega em $t0 = a[200], 800 porque multiplicamos por 4 = 1 word = 32 bits = 1 inteiro</li>
+                <li>add $t0, $s2, $t0   #$t0 = $s2 + $t0, ou seja: A[200] = h + A[200]</li>
+                <li>sw $t0, 800($t1)    #salva na memória A[200], cuja base do endereço encontra-se em $t1</li>
+              </ol>
               
           </ul>
         </p>
