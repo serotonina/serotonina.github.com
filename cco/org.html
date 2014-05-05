@@ -19,7 +19,7 @@
         <p>
         <h3>aula 3 = Conjunto de instruções - FORMATIVO</h3>
           <ul>
-            <li>32 registradores de uso geral de 32 bits</li>
+            <li>32 registradores de uso geral de 32 bits e intruções de 32 bits</li>
             <li>Banco de registradores: $zero, $at, $v0, $v1, $a0...$a3, $t0..$t9, $s0..$s7, $k0, $k1, $gp, $sp, $fp, $ra</li>
             <li>Máquina LOAD-STORE: existem instruções específicas para se acessar a memória e somente estas o acessam(lw, sw)</li>
             <li>Demais instruções acessam operando em REGISTRADORES.</li>
@@ -40,6 +40,15 @@
                 <li>Alinhado dado 'XXXXXXXX': word 1 - [XX XX XX XX]</li>
                 <li>Desalinhado dado 'XXXXXXXX': word 1 - [?? ? XX XX], word 2 - [XX XX ?? ??]</li></li>
               </ul>
+            <li>Instruções imediatas: constante imbutida na instrução. Ex: addi $s1, $s1, 3($s1 = $s1 + 3)</li>
+            <li>Formatos de instrução: (opcode = código de operação, rs e rt = registradores,
+                rd = registrador de destino, shamt = shift amount, funct = função).</li>
+              <ul>
+                <li>R = [6 bits(opcode) | 5 bits(rs) | 5 bits (rt) | 5 bits(rd) | 5 bits(shamt) | 6 bits(funct)]</li>
+                <li>I = [6 bits(opcode) | 5 bits(rs) | 5 bits (rt) | constante ou endereço ]</li>
+              </ul>
+              
+              
           </ul>
         </p>
   
