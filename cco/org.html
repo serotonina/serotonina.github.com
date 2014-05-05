@@ -92,8 +92,22 @@
         </p>
 
         <p>
-          <h3>aula 5 = Conjunto de instruções - FORMATIVO</h3>
+          <h3>aula 5 = Conjunto de instruções ARM - FORMATIVO</h3>
             <ul>
+              <li>ARM e MIPS tem a mesma filosofia(RISC - operações primitivas, máquina load/store, 3 registradores).</li>
+              <li>MIPS tem mais registradores, ARM tem mais modos de endereçamento.</li>
+              <li>DIFERENÇAS NO DESVIO CONDICIONAL:</li>
+              <ul>
+                <li>ARM usa registrador ESPECIAL: PSW - Program Status Word (MIPS usa registradores de uso geral 'slt $t0, $s1, $s2' 'bne $t0, $zero, L'</li>
+                <li>4 bits de PSW: N(Negativo), Z(Zero), C(Carry) e O(Overflow).</li>
+                <li>Estes flags são ativados em comparações: 'CMP R1, R2'(explícita) e SUB R1, R2(implícita).</li>
+                <li>IMPLEMENTAÇÃO COM INTRUÇÕES CONDICIONAIS: </li>
+                  <ol>
+                    <li>CMP r1, r2 ////compara e seta os flags</li>
+                    <li>ADDLT r3, r3, #1 ////r3 = r3 + 1 se r1 < r2</li>
+                    <li>SUBGE r3, r3, #1 ////r3 = r3 - 1 se r1 > r2</li>
+                  </ol>
+              </ul>
             </ul>
         </p>
 
