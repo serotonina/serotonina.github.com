@@ -35,7 +35,11 @@
                   </ul>
                   <li>Isto é: [0x12345678] -> big endian será [x078563412] -> little endian (O VALOR NÃO MUDA, MAS SIM O MODO COMO SE LÊ).</li>
               </ul>
-            <li></li>
+            <li>Alinhamento: dado contíguo em memória.</li>
+              <ul>
+                <li>Alinhado dado 'XXXXXXXX': word 1 - [XX XX XX XX]</li>
+                <li>Desalinhado dado 'XXXXXXXX': word 1 - [?? ? XX XX], word 2 - [XX XX ?? ??]</li></li>
+              </ul>
           </ul>
         </p>
   
