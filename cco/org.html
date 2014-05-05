@@ -94,7 +94,39 @@
 
         <p>
           <h3>aula 5 = Conjunto de instruções - FORMATIVO</h3>
-            <ul></ul>
+            <ul>
+              <li>Procedimento - chama, efetua, retorna.</li>
+              <li>Registradores: $a0-$a3: parâmetros, $v0-$v1: valor de retorno, $ra: endereço de retorno</li>
+              <li>Instruções: jal procedure - $ra = pc + 4 ##pc = procedure. jr $ra ##retorna.</li>
+              <li>Salvamento(antes) e restauração(depois) de contexto na pilha($sp - cresce para baixo) </li>
+              <ul>
+                <li>PUSH -> $sp = $sp - 4 </li>
+                &nbsp&nbsp&nbsp addi $sp, $sp, -4
+                &nbsp&nbsp&nbsp sw $s0, 0($sp)
+                <li>POP -> $sp = $sp + 4</li>
+                &nbsp&nbsp&nbsp lw $s0, 0($sp)
+                &nbsp&nbsp&nbsp addi $sp, $sp, 4
+              </ul>
+              <li>Compilando rotina recursiva fact:</li>
+              <ol>
+                <li>fact:</li>
+                <li>addi $sp, $sp, -8</li>
+                <li>sw $ra, 4($sp)</li>
+                <li>sw $a0, 0($sp)</li>
+                <li>slti $t0, $a0, 1</li>
+                <li>beq $t0, $zero, L1</li>
+                <li>addi $v0, $zero, 1</li>
+                <li>addi $sp, $sp, 8</li>
+                <li>jr $ra</li>
+                <li>L1:</li>
+                <li>addi $a0, $a0, -1</li>
+                <li>jal fact</li>
+                <li>lw $a0, 0($sp)</li>
+                <li>lw $ra, 4($sp)</li>
+                <li>mul $v0, $a0, $v0</li>
+                <li>jr $ra</li>
+              </ol>
+            </ul>
         </p>
 
         <p>
