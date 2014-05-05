@@ -110,17 +110,17 @@
               <li>Compilando rotina recursiva fact:</li>
               <ol>
                 <li>fact:</li>
-                <li>addi $sp, $sp, -8</li>
-                <li>sw $ra, 4($sp)</li>
-                <li>sw $a0, 0($sp)</li>
-                <li>slti $t0, $a0, 1</li>
-                <li>beq $t0, $zero, L1</li>
-                <li>addi $v0, $zero, 1</li>
-                <li>addi $sp, $sp, 8</li>
-                <li>jr $ra</li>
+                <li>&nbsp&nbsp&nbsp addi $sp, $sp, -8</li>
+                <li>&nbsp&nbsp&nbsp sw $ra, 4($sp)</li>
+                <li>&nbsp&nbsp&nbsp sw $a0, 0($sp)</li>
+                <li>&nbsp&nbsp&nbsp slti $t0, $a0, 1</li>
+                <li>&nbsp&nbsp&nbsp beq $t0, $zero, L1</li>
+                <li>&nbsp&nbsp&nbsp addi $v0, $zero, 1</li>
+                <li>&nbsp&nbsp&nbsp addi $sp, $sp, 8</li>
+                <li>&nbsp&nbsp&nbsp jr $ra</li>
                 <li>L1:</li>
-                <li>addi $a0, $a0, -1</li>
-                <li>jal fact</li>
+                <li>&nbsp&nbsp&nbsp addi $a0, $a0, -1</li>
+                <li>&nbsp&nbsp&nbsp jal fact</li>
                 <li>lw $a0, 0($sp)</li>
                 <li>lw $ra, 4($sp)</li>
                 <li>mul $v0, $a0, $v0</li>
