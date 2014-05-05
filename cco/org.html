@@ -183,9 +183,9 @@
             <li>Montador:</li>
             <ul>
               <li>Processa um arquivo por vez.</li>
-              <li>1º Extrai os componentes e mapeia referências para endereços na tabela de símbolos(LOCAIS RESOLVIDAS, globais ainda não).</li>
+              <li>1º Extrai os componentes e mapeia referências para endereços na tabela de símbolos(referências LOCAIS RESOLVIDAS, globais ainda não).</li>
               <li>2º Traduz as instruções(codificação binária).</li>
-              <li>Fornece recursos como macros e pseudo-instruções - mais seguras, com registrador reservado $at. Ex: la $t0, label ou bge $t0, $t1, exit</li>
+              <li>Fornece recursos como macros e pseudo-instruções - mais seguras, com registrador reservado $at. Ex: 'la $t0, label' ou 'bge $t0, $t1, exit'</li>
             </ul>
             <li>Uso da memória(2GB):</li>
             <ul>
