@@ -70,10 +70,25 @@
                   </ul>
                 <li>shift right = >> em C = srl em MIPS</li>
                 <li>AND bit-a-bit = & em C = and, andi em MIPS</li>
+                     <li>and $t0, $t1, $2, 4 #$t0 = $t1 & $t2 <br>
+                      $t2 = 0000 0000 0000 1000 0000 0000 1100 1000 <br>
+                      $t1 = 0000 0000 0100 0000 1000 0000 1100 0000 <br>
+                      $t0 = 0000 0000 0000 0000 0000 0000 1100 0000
+                      </li>
                 <li>OR bit-a-bit = | em C = or, ori em MIPS</li>
+                    <li>or $t0, $t1, $2, 4 #$t0 = $t1 | $t2 <br>
+                      $t2 = 0000 0000 0000 1000 0000 0000 1100 1000 <br>
+                      $t1 = 0000 0000 0100 0000 1000 0000 1100 0000 <br>
+                      $t0 = 0000 0000 0100 1000 0000 0000 1100 1000
+                    </li>
                 <li>NOT bit-a-bit = ~ em C = nor em MIPS</li>
               </ul>
-            <li>Linguagem de montagem = simbólica/mnemonicos</li>
+            <li>Desvios:</li>
+              <li>Condicional:</li> <br>
+              beq reg1, reg2, L1 #se reg1 = reg2, vá para o endereço L1 <br>
+              bne reg1, reg2, L1 #se reg1 != reg2, vá para o endereço L1
+              <li>Incondicional:</li> <br>
+              j L1 #vá para o endereço L1
             <li>Assembly = legibilidade baixa e produtividade menor</li>
            </ul>
         </p>
