@@ -112,9 +112,12 @@
         <p>
           <h3>aula 8 = Conjunto de instruções - FORMATIVO</h3>
             <ul>
+              <li>Overflow: Cin[MSB] xor Cout[MSB] = 1</li>
+              <li>Ignorando overflow: addu, addiu, subu.  </li>
               <li>Suporte para MULTIPLICAÇÃO: mult $s2 $s3 --- Hi, Lo = $s2.$s3</li>
               <li>Suporte para DIVISÃO: div $s2 $s3 --- Hi = $s2 mod $s3, Lo = $s2/$s3</li>
-              <li>Extraindo... mfhi $s1 ### $s1 = Hi --- mflo $s1 ### $s1 = Lo</li>
+              <li>Sinalizados: mult, div. NÃO Sinalizados: multu, divu.</li>
+              <li>Extraindo... mfhi $s1 ###$s1 = Hi --- mflo $s1 ###$s1 = Lo</li>
               <li>Paralelismo: dois processadores acessando/modificando sucessivamente um mesmo valor na memória(Data race).</li>
               &nbsp&nbsp&nbsp Operação atômica:
               <ul>
