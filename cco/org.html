@@ -121,11 +121,10 @@
                 <li>L1:</li>
                 <li>&nbsp&nbsp&nbsp addi $a0, $a0, -1</li>
                 <li>&nbsp&nbsp&nbsp jal fact</li>
-                <li>&nbsp&nbsp&nbsp lw $a0, 0($sp)</li>
-                <li>&nbsp&nbsp&nbsp lw $ra, 4($sp)</li>
-                <li>&nbsp&nbsp&nbsp addi $sp, $sp, 8</li>
-                <li>&nbsp&nbsp&nbsp mul $v0, $a0, $v0</li>
-                <li>&nbsp&nbsp&nbsp jr $ra</li>
+                <li>lw $ra, 4($sp)</li>
+                <li>addi $sp, $sp, 8</li>
+                <li>mul $v0, $a0, $v0</li>
+                <li>jr $ra</li>
               </ol>
             </ul>
         </p>
