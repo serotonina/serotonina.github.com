@@ -21,12 +21,18 @@
           <li>MAN: Redes metropolitanas</li>
           <li>WAN: Redes geograficamento distribuídas</li>
           <li>Internet: rede de redes - NÚCLEO DA REDE</li>
+          <ul>
+            <li>ISP (TIER-1 Provedores de backbone nacional e internacional): interligam de forma privada ou PTT(Ponto de Troca de Tráfego: 
+              reduz o custo e potencializa benefícios de troca de tráfego.</li>
+            <li>ISP menores(TIER-2): paga ao TIER-1 pela internet, também se interligam.</li>
+            <li>ISP locais(TIER-3): clientes de ISP superiores(Universidades, corporações, provedores)</li>
+          </ul>
         </ul>
         <li>Dispositivos:</li>
         <ul>
           <li>Host, sistemas finais: servidores, celulares, www, peer-to-peer... - BORDA DA REDE</li>
           <li>Enlaces de comunicação: par-trançado, fibra, satélite...</li>
-          <li>Roteadores: roteiam PACOTES DE DADOS - NÚCLEO DA REDE</li>
+          <li>Roteadores: roteiam PACOTES DE DADOS(a priori, passo-a-passo) - NÚCLEO DA REDE</li>
           <li>ISP: provedoras de serviço internet</li>
         </ul>
         <li>Borda da rede:</li>
@@ -36,9 +42,45 @@
           <li>Serviço sem conexão (UDP)- transferência não confiável, não controla fluxo e congestionamento. EX: streaming
             mídia, internet, telefonia.</li>
         </ul>
+        <li>Comutação:</li>
+        <ul>
+          <li>Comutação por mensagens: dado completamente enviado da fonte ao destino, usa toda banda disponível -
+          monopoliza enlace: armazena e manda. </li>
+          <li>Comutação de pacotes: mensagem quebrada em pacotes, cada pacote usa toda banda disponível, podem ser transmitidos
+            por vários caminhos porém devem esperar em filas, pode ocorrer perda de pacote. <br>
+            Atraso: Processamento do nó, Enfileiramento, Atraso de serialização e Atraso de propagação.
+          </li>
+          <li>Comutação de circuitos: são reservados recursos necessários pelo período da comunicação, garantindo taxa
+            de transmissão. MONOPOLIZA TODO O CAMINHO
+          </li>
+        </ul>
+        
+        
+        
+        
       </ul>    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
   </p>
   
   </body>
 <html>
+
+
+
+
+
+
+
+
+
