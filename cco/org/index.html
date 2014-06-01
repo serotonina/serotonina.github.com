@@ -323,9 +323,23 @@
            <h3>aula 15 = Aceleração: Pipeline (funcionamento, hazards estruturais e de dados) - FORMATIVO</h3>
            <img src="https://raw.githubusercontent.com/serotonina/serotonina.github.com/master/cco/org/forwarding%20lw-r.png" title="Forwarding lw-r" vspace="10px" hspace="15px" border="1px" align="center"/>
            <img src="https://raw.githubusercontent.com/serotonina/serotonina.github.com/master/cco/org/forwarding%20r-r.png" title="Forwarding r-r" vspace="10px" hspace="15px" border="1px" align="center"/>      
-          
         </p>
 
+        <p>
+          <h3>aula 16 = Aceleração: Pipeline (hazards de controle); datapath com pipeline (execução e controle de instruções).</h3>
+          <ul>
+            <li>Stall on Branch: para quando tiver um branch e espera até o resultado ser calculado.</li>
+            <li>Branch Prediction: pode usar a hipótese de desvio tomado ou não tomado. Se usar desvio não tomado sempre continua
+              executando a próxima instrução, porém se estiver errado há penalidade.</li>
+            <li>Sinais de controle: 
+              <ul>
+                <li>Estágio EX: RedDst, ALUOp(1,0) ALUSrc</li>
+                <li>Estágio ME: Branch, MemRead, MemWrite</li>
+                <li>Estágio WB: RegWrite, MemtoReg</li>
+              </ul>
+            </li>
+          </ul>
+        </p>
 
 
   </body>
