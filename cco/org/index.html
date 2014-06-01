@@ -329,8 +329,14 @@
           <h3>aula 16 = Aceleração: Pipeline (hazards de controle); datapath com pipeline (execução e controle de instruções).</h3>
           <ul>
             <li>Stall on Branch: para quando tiver um branch e espera até o resultado ser calculado.</li>
-            <li>Branch Prediction: pode usar a hipótese de desvio tomado ou não tomado. Se usar desvio não tomado sempre continua
+            <li>Previsão ESTÁTICA - Branch: pode usar a hipótese de desvio tomado ou não tomado. Se usar desvio não tomado sempre continua
               executando a próxima instrução, porém se estiver errado há penalidade.</li>
+            <li>Previsão DINÂMICA - Branch: usa uma hipótese, porém guarda numa tabela.
+              <ul>
+                <li>1 bit por entrada: máquina com 2 estados(taken, not taken). Se mudar, vai pro outro estado.</li>
+                <li>2 bits por entrada: máquina com 4 estados(2 taken, 2 not taken). Tem que mudar 2 vezes para MUDAR efetivamente.</li>
+              </ul>
+            </li>
             <li>Sinais de controle: 
               <ul>
                 <li>Estágio EX: RegDst, ALUOp(1,0) ALUSrc</li>
@@ -340,6 +346,16 @@
             </li>
           </ul>
         </p>
+        
+        <p>
+         <h3>Delayed Branch - OPCIONAL = nem tanto.</h3>
+         <ul>
+           <li>Delayed Slot: instrução independente do desvio que pode ser acomodada em um slot. SEMPRE será executada.</li>
+           <li>É sempre tomado após executar a intrução do slot</li>
+         </ul>
+          
+        </p>
+        
 
 
   </body>
