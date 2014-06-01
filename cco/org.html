@@ -145,7 +145,7 @@
               </ul>
             <li>Endereçamento RELATIVO e PSEUDO-DIRETO</li>
               <ul>
-                <li>Relativo: PC = PC + deslocamento(-2^15, +2^15)</li>
+                <li>Relativo: PC = PC + 4 + deslocamento(-2^15, +2^15)</li>
                 <li>Deslocamento codificado em PALAVRAS: deslocamento/4 </li>
                 <li>Deslocamento > 16 bits: beq $s0, $s1, L1 --> bne $s0, $s1, L2 ||| j L1 ||| L2 ...</li>
                 <li>RELATIVO: [0x1 FFFC, -0x2 0000]</li>
